@@ -1,0 +1,5 @@
+^IBRtools\.Rproj$
+^\.Rproj\.user$
+^IBRtools\.Rcheck$
+^IBRtools.*\.tar\.gz$
+^IBRtools.*\.tgz$

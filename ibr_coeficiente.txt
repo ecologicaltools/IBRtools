@@ -1,0 +1,4 @@
+treatment	biomarker1	biomarker2	biomarker3	biomarker4	biomarker5	biomarker6	biomarker7
+site1	1	1	1	-1	1	1	-1
+site2	1	1	1	-1	1	1	-1
+site3	1	1	1	-1	1	1	-1
