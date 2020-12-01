@@ -25,8 +25,7 @@
 ibrv2_index <- function(df, na.rm = TRUE, ...) {
   df %>% dplyr::mutate_if(is.character, as.factor) %>%  tidyr::unite("sites", (where(is.factor))) -> df
   x=df
-  data.table::setDT(x)
-  x=x[, .(`a` = .N), by = sites][,2]
+  data.table::setDT(x[, .(`a` = .N), by = sites][,2])->x
   my.list = vector("list", nlevels(as.factor(df$sites)))
   for (i in 1:nlevels(as.factor(df$sites))) {
     A=rep(i, each=x$a[i])
