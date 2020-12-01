@@ -21,6 +21,7 @@ Depends:
     R (>= 3.4.0),
     dplyr (>= 1.0.0),
     tibble (>= 3.0.4)
+    data.tale (>= 1.13.0)
 Imports:
     dplyr (>= 1.0.0),
     gtools (>= 3.8.2),

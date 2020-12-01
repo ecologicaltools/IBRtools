@@ -65,4 +65,5 @@ ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   return(Avalue1)
 
 }
-
+data(enzact2)
+ibrv2_bdi(enzact2)
