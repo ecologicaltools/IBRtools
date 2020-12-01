@@ -21,9 +21,13 @@
 
 
 ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
-  my.list = vector("list", length(levels(unique(df[,1]))))
-  for (i in 1:(length(levels(unique(df[,1]))))) {
-    A=rep(i, each=summary(df[,1])[[i]])
+  df %>% dplyr::mutate_if(is.character, as.factor) %>%  tidyr::unite("sites", (where(is.factor))) -> df
+  x=df
+  data.table::setDT(x)
+  x=x[, .(`a` = .N), by = sites][,2]
+  my.list = vector("list", nlevels(as.factor(df$sites)))
+  for (i in 1:nlevels(as.factor(df$sites))) {
+    A=rep(i, each=x$a[i])
     my.list[[i]]=A
   }
   df1 <- data.frame(matrix(unlist(my.list), byrow=T))
@@ -56,10 +60,9 @@ ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   ai <- rbind(ai[-1,], do.call(rbind, my.list2))
   xvar <-  as.matrix(x[,1])
   as.data.frame(cbind(xvar, ai)) -> Avalue
-  Avalue %>% separate(treatment, into = c("num", "group"), sep = "_") -> Avalue1
+  Avalue %>% tidyr::separate(treatment, into = c("num", "group"), sep = "_") -> Avalue1
   Avalue1[,-1] -> Avalue1
   return(Avalue1)
 
 }
-
 

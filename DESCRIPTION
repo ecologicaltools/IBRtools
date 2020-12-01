@@ -1,6 +1,6 @@
 Package: IBRtools
 Title: Indexes for biomonitoring assessment and graphic creation 
-Version: 0.0.1.6
+Version: 0.0.1.7
 Authors@R: 
     c(person(given = "Anna Carolina",
            family = "Resende",
@@ -28,5 +28,6 @@ Imports:
     fmsb (>= 0.7.0),
     binhf (>= 1.0.3),
     tibble (>= 3.0.4),
-    magrittr (>= 2.0.1)
+    magrittr (>= 2.0.1),
+    data.table (>= 1.13.0)
 SystemRequirements: GNU make
