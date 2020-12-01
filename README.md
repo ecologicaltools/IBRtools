@@ -4,13 +4,13 @@
 #
 #
 ## How to install
-#
-#### install.packages("devtools")
-#### library(devtools)
-#
-## 1) Directly in R with devtools
-#
-#### devtools::install_github("annaresende/IBRtools")
+```r
+# install.packages("devtools")
+# library(devtools)
+
+devtools::install_github("annaresende/IBRtools")
+
+```
 #
 ## 2) Downloading the zip version from this repository
 ####  Code -> Download zip -> Unzip it in your computer and open the directory IBRtools -> run the code devtools::install() -> update the packages as requested 
