@@ -26,4 +26,12 @@ Depends:
     binhf (>= 1.0.3),
     tibble (>= 3.0.4),
     magrittr (>= 2.0.1)
+Imports:
+    dplyr (>= 1.0.0),
+    gtools (>= 3.8.2),
+    tidyr (>= 1.1.0),
+    fmsb (>= 0.7.0),
+    binhf (>= 1.0.3),
+    tibble (>= 3.0.4),
+    magrittr (>= 2.0.1)
 SystemRequirements: GNU make
