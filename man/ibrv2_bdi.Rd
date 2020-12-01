@@ -24,6 +24,6 @@ Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013). A novel “Integrated Biomark
 \examples{
 data(enzact2)
 
-ibrv2_std(enzact2)
+ibrv2_bdi(enzact2)
 
 }
