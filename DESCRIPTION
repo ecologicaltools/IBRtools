@@ -30,5 +30,4 @@ Imports:
     binhf (>= 1.0.3),
     tibble (>= 3.0.4),
     magrittr (>= 2.0.1),
-    data.table (>= 1.12.8)
 SystemRequirements: GNU make
