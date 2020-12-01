@@ -1,29 +1,37 @@
 #' IBRv2 (Integrated Biological Responses version 2)
 #'
 #' This function calculates de IBRv2 index purposed by Sanchez et al. 2013.
-#' 
+#'
 #' Returns a dataframe with the IBRv2 values for each area/treatment in your input data.
-#' 
+#'
 #' Please cite this package when you use it!
-#' 
+#'
 #' @param df A data frame containing values the enzymes activities with a reference value on the first rows.
 #'
 #' @export
 #'
 #' @examples
 #' data(enzact2)
-#' 
+#'
 #' ibrv2_index(enzact2)
-#' 
+#'
 #' @section References:
-#' 
+#'
 #' Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013). A novel “Integrated Biomarker Response” calculation based on reference deviation concept. Environmental Science and Pollution Research, 20(5), 2721–2725. https://doi.org/10.1007/s11356-012-1359-1
-#' 
-#' 
+#'
+#'
 
 
-ibrv2_index <- function(df, na.rm = TRUE, ...) { 
-  df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T) -> x
+ibrv2_index <- function(df, na.rm = TRUE, ...) {
+  my.list = vector("list", length(levels(unique(df[,1]))))
+  for (i in 1:(length(levels(unique(df[,1]))))) {
+    A=rep(i, each=summary(df[,1])[[i]])
+    my.list[[i]]=A
+  }
+  df1 <- data.frame(matrix(unlist(my.list), byrow=T))
+  dff=cbind(df1,df)
+  dff$matrix.unlist.my.list...byrow...T. <- as.factor(dff$matrix.unlist.my.list...byrow...T.)
+  dff %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T) -> x
   x1=x[,-1]
   my.list <- vector("list", nrow(x1))
   for(i in 1:nrow(x1)){
@@ -51,12 +59,9 @@ ibrv2_index <- function(df, na.rm = TRUE, ...) {
   indexvalue <- apply(abs(ai), 1, sum)
   xvar <-  as.matrix(x[,1])
   as.data.frame(cbind(xvar, indexvalue)) -> indexf
-  indexf$indexvalue <- as.numeric(indexvalue)
-  return(indexf)
-  
+  indexf %>% separate(treatment, into = c("num", "group"), sep = "_") -> indexf1
+  indexf1[,-1] -> indexf1
+  indexf1$indexvalue <- as.numeric(indexvalue)
+  return(indexf1)
+
 }
-
-
-
-
-

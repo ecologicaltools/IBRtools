@@ -12,7 +12,7 @@
 #' @examples
 #' data(enzact2)
 #'
-#' ibrv2_std(enzact2)
+#' ibrv2_bdi(enzact2)
 #'
 #' @section References:
 #'
@@ -21,7 +21,15 @@
 
 
 ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
-  df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T) -> x
+  my.list = vector("list", length(levels(unique(df[,1]))))
+  for (i in 1:(length(levels(unique(df[,1]))))) {
+    A=rep(i, each=summary(df[,1])[[i]])
+    my.list[[i]]=A
+  }
+  df1 <- data.frame(matrix(unlist(my.list), byrow=T))
+  dff=cbind(df1,df)
+  dff$matrix.unlist.my.list...byrow...T. <- as.factor(dff$matrix.unlist.my.list...byrow...T.)
+  dff %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T) -> x
   x1=x[,-1]
   my.list <- vector("list", nrow(x1))
   for(i in 1:nrow(x1)){
@@ -48,7 +56,9 @@ ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   ai <- rbind(ai[-1,], do.call(rbind, my.list2))
   xvar <-  as.matrix(x[,1])
   as.data.frame(cbind(xvar, ai)) -> Avalue
-  return(Avalue)
+  Avalue %>% separate(treatment, into = c("num", "group"), sep = "_") -> Avalue1
+  Avalue1[,-1] -> Avalue1
+  return(Avalue1)
 
 }
 
