@@ -19,7 +19,7 @@
 #' @examples
 #' data(enzact2)
 #'
-#' ibrv2_std(enzact2) -> enzact2_std
+#' ibrv2_bdi(enzact2) -> enzact2_std
 #'
 #' # subsetting to compare one area with the reference value
 #'
