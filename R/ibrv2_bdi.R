@@ -1,9 +1,9 @@
 #' Standardized values for IBRv2 (Integrated Biological Responses version 2)
 #'
 #' This function calculates de standardized values for IBRv2 index purposed by Sanchez et al. 2013.
-#' 
+#'
 #' Gives a dataframe with the standardized values for each area/treatment in your input data to be used to create the radarchart with the function ibrv2_chart from this same package.
-#' 
+#'
 #' @param df A data frame containing values the enzymes activities with a reference value on the first rows.
 #'
 #'
@@ -13,14 +13,14 @@
 #' data(enzact2)
 #'
 #' ibrv2_std(enzact2)
-#' 
+#'
 #' @section References:
-#' 
+#'
 #' Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013). A novel “Integrated Biomarker Response” calculation based on reference deviation concept. Environmental Science and Pollution Research, 20(5), 2721–2725. https://doi.org/10.1007/s11356-012-1359-1
-#' 
+#'
 
 
-ibrv2_std <- function(df, na.rm = TRUE, ...) { 
+ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T) -> x
   x1=x[,-1]
   my.list <- vector("list", nrow(x1))
@@ -49,7 +49,7 @@ ibrv2_std <- function(df, na.rm = TRUE, ...) {
   xvar <-  as.matrix(x[,1])
   as.data.frame(cbind(xvar, ai)) -> Avalue
   return(Avalue)
-  
+
 }
 
 
