@@ -17,6 +17,12 @@ This function calculates de Integrated Biomarker Response index purposed by Beli
 \details{
 Gives a list of two dataframes, the first data frame is IBR_total and it can be used for statistical analysis (such as ANOVA, t-test) to verify the differences between each level of the independent variable(s). The second data frame is IBR_mean_sd, it gives the mean values and standard deviation for each independent variable, which is usually presented next to a radarplot.
 }
+\section{Warnings}{
+
+
+You must have at least 3 biomarkers and a maximum of 9 biomarkers to perform this index correctly.
+}
+
 \section{References}{
 
 

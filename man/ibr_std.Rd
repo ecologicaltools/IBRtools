@@ -14,6 +14,12 @@ ibr_std(df, z, na.rm = TRUE, ...)
 \description{
 Returns a data frame with standardized values of IBR useful to do a radar chart. This data is fit for our function ibr_chart() from this package that creates this type of plot.
 }
+\section{Warnings}{
+
+
+You must have at least 3 biomarkers and a maximum of 9 biomarkers to perform this index correctly.
+}
+
 \section{References}{
 
 

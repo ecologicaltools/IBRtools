@@ -15,6 +15,14 @@ This function calculates de standardized values for IBRv2 index purposed by Sanc
 \details{
 Gives a dataframe with the standardized values for each area/treatment in your input data to be used to create the radarchart with the function ibrv2_chart from this same package.
 }
+\section{Warnings}{
+
+
+You must have at least 3 biomarkers and a maximum of 15 biomarkers to perform this index correctly.
+
+If you have more than one independent variable, it is necessary to separate the data.frame in subsets so there's only one reference value for each level.
+}
+
 \section{References}{
 
 

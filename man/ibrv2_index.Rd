@@ -17,6 +17,14 @@ Returns a dataframe with the IBRv2 values for each area/treatment in your input 
 
 Please cite this package when you use it!
 }
+\section{Warnings}{
+
+
+You must have at least 3 biomarkers and a maximum of 15 biomarkers to perform this index correctly.
+
+If you have more than one independent variable, it is necessary to separate the data.frame in subsets so there's only one reference value for each level.
+}
+
 \section{References}{
 
 

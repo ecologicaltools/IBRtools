@@ -8,6 +8,10 @@
 #' @param df A data frame containing values the enzymes activities with at least two levels of one independent variable (as.factor).
 #' @param z A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.
 #'
+#' @section Warnings:
+#'
+#' You must have at least 3 biomarkers and a maximum of 9 biomarkers to perform this index correctly.
+#'
 #' @export
 #'
 #' @examples
