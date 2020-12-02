@@ -70,4 +70,3 @@ ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axis
   )
   legend(x=1.2, y=-0.3, legend = rownames(chart[-c(1,2),]), bty = "n", pch=20 , col=colors_border , text.col = "black", cex=0.9, pt.cex=2)
 }
-
