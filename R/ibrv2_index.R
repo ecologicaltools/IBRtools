@@ -64,7 +64,7 @@ ibrv2_index <- function(df, na.rm = TRUE, ...) {
   indexvalue <- apply(abs(ai), 1, sum)
   xvar <-  as.matrix(x[,1])
   as.data.frame(cbind(xvar, indexvalue)) -> indexf
-  indexf %>% tidyr::separate(treatment, into = c("num", "group"), sep = "_") -> indexf1
+  indexf %>% tidyr::separate(treatment, into = c("num", "group"), sep = "_", extra = "drop") -> indexf1
   indexf1[,-1] -> indexf1
   indexf1$indexvalue <- as.numeric(indexvalue)
   return(indexf1)

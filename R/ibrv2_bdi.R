@@ -61,8 +61,9 @@ ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   ai <- rbind(ai[-1,], do.call(rbind, my.list2))
   xvar <-  as.matrix(x[,1])
   as.data.frame(cbind(xvar, ai)) -> Avalue
-  Avalue %>% tidyr::separate(treatment, into = c("num", "group"), sep = "_") -> Avalue1
+  Avalue %>% tidyr::separate(treatment, into = c("num", "group"), sep = "_", extra = "drop") -> Avalue1
   Avalue1[,-1] -> Avalue1
   return(Avalue1)
 
 }
+
