@@ -1,4 +1,6 @@
 # IBRtools 
+<img src="hexlogo/r-ibr-logo.png" width = "300">
+
 # 
 #### This R package was developed to perform important indexes in biomonitoring, the IBR (Integrated Biomarker Response) and IBRv2 (Integrated Biological Response version 2).
 #
