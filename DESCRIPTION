@@ -6,11 +6,12 @@ Authors@R:
            family = "Resende",
            role = c("aut", "cre"),
            email = "annac.resende@gmail.com",
-           comment = c("ORCID = 0000-0003-0909-1255")),
+           comment = c("https://orcid.org/0000-0003-0909-1255")),
        person(given = "Diego",
            family = "Mauro Carneiro Pereira",
            role = c("aut"),
-           email = "diegom8135@gmail.com"))
+           email = "diegom8135@gmail.com",
+           comment = c("https://orcid.org/0000-0003-1554-3684")))
 Description: The IBRtools package calculates two important indexes (IBR and IBRv2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data. 
 License: GPL (>=3) 
 Encoding: UTF-8

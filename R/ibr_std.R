@@ -44,3 +44,4 @@ ibr_std <- function(df, z, na.rm = TRUE, ...) {
   S %>% tibble::rownames_to_column(var = "group") -> S
   return(S)
 }
+
