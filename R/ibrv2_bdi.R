@@ -22,10 +22,13 @@
 
 ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   df %>% dplyr::mutate_if(is.character, as.factor) %>%  tidyr::unite("sites", (where(is.factor))) -> df
-  plyr::count(df, vars = "sites") -> x
+  z=df
+  z$Frequency=rep(1, each=nrow(z))
+  z=data.table::data.table(z)
+  x=z[,list(a=sum(Frequency)),by=sites][,2]
   my.list = vector("list", nlevels(as.factor(df$sites)))
   for (i in 1:nlevels(as.factor(df$sites))) {
-    A=rep(i, each=x$freq[i])
+    A=rep(i, each=x$a[i])
     my.list[[i]]=A
   }
   df1 <- data.frame(matrix(unlist(my.list), byrow=T))
@@ -63,4 +66,3 @@ ibrv2_bdi <- function(df, na.rm = TRUE, ...) {
   return(Avalue1)
 
 }
-
