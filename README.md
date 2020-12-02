@@ -9,7 +9,7 @@
 ```r
 # install.packages("devtools")
 # library(devtools)
-
+Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS"=TRUE) #this is so warnings don't turn into errors
 devtools::install_github("ecologicaltools/IBRtools")
 
 ```
