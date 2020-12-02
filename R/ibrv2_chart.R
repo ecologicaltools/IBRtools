@@ -37,7 +37,7 @@
 #'
 
 ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, seg, ...) {
-  df %>% remove_rownames %>% tibble::column_to_rownames(var = "treatment") %>% round(digits = 1) -> df
+  df %>% remove_rownames %>% tibble::column_to_rownames(var = "group") %>% round(digits = 1) -> df
   max(df)-> max
   min(df) -> min
   rbind(max,min,df) -> chart

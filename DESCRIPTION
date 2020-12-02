@@ -20,8 +20,7 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 3.4.0),
     dplyr (>= 1.0.0),
-    tibble (>= 3.0.4), 
-    data.table (>= 1.13.2)
+    tibble (>= 3.0.4)
 Imports:
     dplyr (>= 1.0.0),
     gtools (>= 3.8.2),
