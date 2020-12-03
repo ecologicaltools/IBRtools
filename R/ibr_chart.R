@@ -7,7 +7,12 @@
 #' @inheritParams fmsb::radarchart
 #'
 #' @export
+#' @section Tips:
 #'
+#' If you have any problems with the axis labels, you can do it manually by changing two params in the function: seg and caxislabel.
+#' The caxislabel param has to be a sequence, such as: caxislabels = seq(-1,1.9,0.34), each number is: seq(minvalue, maxvalue, breakvalue)
+#'
+#' The seg param can be any number starting from 3, you can change it with: seg = 6.
 #'
 #' @examples
 #'
@@ -51,7 +56,7 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axisla
                    cglcol= cglco,
                    cglty=1,
                    axislabcol= axislabcol,
-                   caxislabels=seq(min(df),max(df), signif((max(df)/5), digits =2)),
+                   caxislabels=seq(min(df),max(df), round((max(df)/5), digits =1)),
                    cglwd=cglwd,
                    vlcex=0.8, ...
   )

@@ -45,6 +45,15 @@ ibr_chart(
 \description{
 Plots the IBR standardized values for the enzymes to be compared with one another.
 }
+\section{Tips}{
+
+
+If you have any problems with the axis labels, you can do it manually by changing two params in the function: seg and caxislabel.
+The caxislabel param has to be a sequence, such as: caxislabels = seq(-1,1.9,0.34), each number is: seq(minvalue, maxvalue, breakvalue)
+
+The seg param can be any number starting from 3, you can change it with: seg = 6.
+}
+
 \section{References}{
 
 
