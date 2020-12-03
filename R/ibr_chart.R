@@ -29,7 +29,7 @@
 #'
 #' colorvector<- c(rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
 #'
-#' legend(x=1.2, y=-0.3, legend = enzact$group), bty = "n", pch=20 , col=colorvector , text.col = "black", cex=0.9, pt.cex=2)
+#' legend(x=1.2, y=-0.3, legend = enzact$group, bty = "n", pch=20 , col=colorvector , text.col = "black", cex=0.9, pt.cex=2)
 #'
 #' @section References:
 #'

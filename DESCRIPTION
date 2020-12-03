@@ -1,6 +1,6 @@
 Package: IBRtools
 Title: Indexes for biomonitoring assessment and graphic creation 
-Version: 0.0.2.0
+Version: 0.0.2.4
 Authors@R: 
     c(person(given = "Anna Carolina",
            family = "Resende",
