@@ -12,6 +12,9 @@
 #'
 #'
 #' @param df A data.frame that resulted from the function ibrv2_std
+#'
+#' @param legend Default is NULL, when any other value is given the legend will not appear and you can manually create your own using the legend() function right after building your radarchart
+#'
 #' @inheritParams fmsb::radarchart
 #'
 #' @export
@@ -36,7 +39,7 @@
 #'  Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
 #'
 
-ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, seg, ...) {
+ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, seg, legend = NULL, ...) {
   df %>% remove_rownames %>% tibble::column_to_rownames(var = "group") %>% round(digits = 1) -> df
   max(df)-> max
   min(df) -> min

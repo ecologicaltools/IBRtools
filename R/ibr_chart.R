@@ -4,6 +4,9 @@
 #'
 #'
 #' @param df A data.frame that resulted from the function ibr_std
+#'
+#' @param legend Default is NULL, when any other value is given the legend will not appear and you can manually create your own using the legend() function right after building your radarchart
+#'
 #' @inheritParams fmsb::radarchart
 #'
 #' @export
@@ -14,11 +17,19 @@
 #'
 #' The seg param can be any number starting from 3, you can change it with: seg = 6.
 #'
+#' If you still can't solve the problem, try rounding your standardized values with the function round()
+#'
 #' @examples
 #'
 #' data(enzact)
+#'
 #' ibr_std(enzact) -> enzact_chart
-#' ibr_chart(enzact_chart)
+#'
+#' ibr_chart(enzact_chart, legend = F)
+#'
+#' colorvector<- c(rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
+#'
+#' legend(x=1.2, y=-0.3, legend = enzact$group), bty = "n", pch=20 , col=colorvector , text.col = "black", cex=0.9, pt.cex=2)
 #'
 #' @section References:
 #'
@@ -30,7 +41,7 @@
 #'
 #'
 
-ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, ...) {
+ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, seg, legend = NULL, ...) {
   df %>% remove_rownames %>% tibble::column_to_rownames(var = "group") -> df
   max(df)-> max
   min(df) -> min
@@ -47,6 +58,7 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axisla
   if(missing(axislabcol)) {axislabcol = "black"}
   if(missing(cglwd)) {cglwd = 0.8}
   if(missing(caxislabels)) {caxislabels = 7}
+  if(missing(seg)) {seg =4}
   fmsb::radarchart(chart,
                    axistype = axistype,
                    pcol= pcol,
@@ -60,7 +72,7 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axisla
                    cglwd=cglwd,
                    vlcex=0.8, ...
   )
-  legend(x=1.2, y=-0.3, legend = rownames(chart[-c(1,2),]), bty = "n", pch=20 , col=colors_border , text.col = "black", cex=0.9, pt.cex=2)
+  if(is.null(legend)) {legend = legend(x=1.2, y=-0.3, legend = rownames(chart[-c(1,2),]), bty = "n", pch=20 , col=colors_border , text.col = "black", cex=0.9, pt.cex=2)}
 
 }
 

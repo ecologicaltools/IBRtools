@@ -17,6 +17,7 @@ ibrv2_chart(
   cglwd,
   caxislabels,
   seg,
+  legend = NULL,
   ...
 )
 }
@@ -42,6 +43,8 @@ ibrv2_chart(
 \item{caxislabels}{Character vector for center axis labels, overwriting values specified in axistype option.  If NULL, the values specified by axistype option are used. Default is NULL.}
 
 \item{seg}{The number of segments for each axis (default 4).}
+
+\item{legend}{Default is NULL, when any other value is given the legend will not appear and you can manually create your own using the legend() function right after building your radarchart}
 
 \item{...}{Miscellaneous arguments to be given for plot.default().}
 }

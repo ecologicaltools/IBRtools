@@ -16,6 +16,8 @@ ibr_chart(
   axislabcol,
   cglwd,
   caxislabels,
+  seg,
+  legend = NULL,
   ...
 )
 }
@@ -40,6 +42,10 @@ ibr_chart(
 
 \item{caxislabels}{Character vector for center axis labels, overwriting values specified in axistype option.  If NULL, the values specified by axistype option are used. Default is NULL.}
 
+\item{seg}{The number of segments for each axis (default 4).}
+
+\item{legend}{Default is NULL, when any other value is given the legend will not appear and you can manually create your own using the legend() function right after building your radarchart}
+
 \item{...}{Miscellaneous arguments to be given for plot.default().}
 }
 \description{
@@ -52,6 +58,8 @@ If you have any problems with the axis labels, you can do it manually by changin
 The caxislabel param has to be a sequence, such as: caxislabels = seq(-1,1.9,0.34), each number is: seq(minvalue, maxvalue, breakvalue)
 
 The seg param can be any number starting from 3, you can change it with: seg = 6.
+
+If you still can't solve the problem, try rounding your standardized values with the function round()
 }
 
 \section{References}{
@@ -67,7 +75,13 @@ Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with some De
 \examples{
 
 data(enzact)
+
 ibr_std(enzact) -> enzact_chart
-ibr_chart(enzact_chart)
+
+ibr_chart(enzact_chart, legend = F)
+
+colorvector<- c(rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
+
+legend(x=1.2, y=-0.3, legend = enzact$group), bty = "n", pch=20 , col=colorvector , text.col = "black", cex=0.9, pt.cex=2)
 
 }
