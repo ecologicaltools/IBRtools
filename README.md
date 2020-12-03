@@ -2,7 +2,7 @@
 <img src="hexlogo/r-ibr-logo.png" width = "300">
 
 # 
-#### The IBRtools package calculates two important indexes IBR (Integrated Biomarker Response) and IBRv2 (Integrated Biological Response version 2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!
+#### The IBRtools package calculates two important indexes IBR (Integrated Biomarker Response) and IBRv2 (Integrated Biological Response version 2), it also calculates the intermediate values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!
 #
 #
 ## How to install
@@ -11,6 +11,7 @@
 # library(devtools)
 Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS"=TRUE) #this is so warnings don't turn into errors
 devtools::install_github("ecologicaltools/IBRtools")
+library(IBRtools)
 
 ```
 #
