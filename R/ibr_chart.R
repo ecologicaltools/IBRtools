@@ -42,12 +42,13 @@
 #'
 
 ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, seg, legend = NULL, ...) {
-  df %>% remove_rownames %>% tibble::column_to_rownames(var = "group") -> df
+  df %>% remove_rownames %>% tibble::column_to_rownames(var = "group") %>% round(digits = 1) -> df
   max(df)-> max
   min(df) -> min
   rbind(max,min,df) -> chart
-  colors_border <- c( rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
-  colors_in <- c( rgb(1,0.4,0.8,0.25), rgb(0,0.6,0.6,0.25) , rgb(0.4,0.4,0.6,0.25), rgb(0,0.4,0.4,0.25) )
+  as.data.frame(chart)-> chart
+  colors_border <- c(rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
+  colors_in <- c( rgb(1,0.4,0.8,0.25), rgb(0,0.6,0.6,0.25) , rgb(0.4,0.4,0.6,0.25), rgb(0,0.4,0.4,0.25))
   if(missing(axistype)) {axistype = 1}
   if(missing(pcol)) {pcol = colors_border}
   if(missing(pfcol)) {pfcol = colors_in}
@@ -57,7 +58,7 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axisla
   if(missing(cglty)) {cglty = 1}
   if(missing(axislabcol)) {axislabcol = "black"}
   if(missing(cglwd)) {cglwd = 0.8}
-  if(missing(caxislabels)) {caxislabels = 7}
+  if(missing(caxislabels)) {caxislabels=seq(min(df),max(df), round((max(df)/5), digits =1))}
   if(missing(seg)) {seg =4}
   fmsb::radarchart(chart,
                    axistype = axistype,
@@ -68,11 +69,9 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axisla
                    cglcol= cglco,
                    cglty=1,
                    axislabcol= axislabcol,
-                   caxislabels=seq(min(df),max(df), round((max(df)/5), digits =1)),
+                   caxislabels=caxislabels,
                    cglwd=cglwd,
-                   vlcex=0.8, ...
-  )
+                   vlcex=0.8, ...)
   if(is.null(legend)) {legend = legend(x=1.2, y=-0.3, legend = rownames(chart[-c(1,2),]), bty = "n", pch=20 , col=colors_border , text.col = "black", cex=0.9, pt.cex=2)}
 
 }
-
