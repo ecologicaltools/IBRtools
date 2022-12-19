@@ -6,3 +6,4 @@
 ^hexlogo
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^\.github$
