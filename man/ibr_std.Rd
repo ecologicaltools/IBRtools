@@ -4,7 +4,7 @@
 \alias{ibr_std}
 \title{Standardized values for IBR (Integrated Biomarker Response) index}
 \usage{
-ibr_std(df, z, na.rm = TRUE, ...)
+ibr_std(df, z)
 }
 \arguments{
 \item{df}{A data frame containing values the enzymes activities with at least two levels of one independent variable.}

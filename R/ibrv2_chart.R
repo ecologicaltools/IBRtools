@@ -39,7 +39,7 @@
 #'  Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
 #'
 
-ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axislabcol, cglwd, caxislabels, seg, legend = NULL, ...) {
+ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglcol, cglty, axislabcol, cglwd, caxislabels, seg, legend = NULL, ...) {
   df %>% remove_rownames %>% tibble::column_to_rownames(var = "group") %>% round(digits = 1) -> df
   max(df)-> max
   min(df) -> min
@@ -50,7 +50,7 @@ ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axis
   if(missing(pcol)) {pcol = colors_border}
   if(missing(plwd)) {plwd = 2}
   if(missing(plty)) {plty = c(2,1)}
-  if(missing(cglco)) {cglco = "grey"}
+  if(missing(cglcol)) {cglcol = "grey"}
   if(missing(cglty)) {cglty = 1}
   if(missing(axislabcol)) {axislabcol = "black"}
   if(missing(cglwd)) {cglwd = 0.8}
@@ -61,7 +61,7 @@ ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglco, cglty, axis
                    pcol= pcol,
                    plwd= plwd,
                    plty= plty,
-                   cglcol= cglco,
+                   cglcol= cglcol,
                    cglty=1,
                    axislabcol= axislabcol,
                    caxislabels= caxislabels,

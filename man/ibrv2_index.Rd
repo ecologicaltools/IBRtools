@@ -4,7 +4,7 @@
 \alias{ibrv2_index}
 \title{IBRv2 (Integrated Biological Responses version 2)}
 \usage{
-ibrv2_index(df, na.rm = TRUE, ...)
+ibrv2_index(df)
 }
 \arguments{
 \item{df}{A data frame containing values the enzymes activities with a reference value on the first rows.}

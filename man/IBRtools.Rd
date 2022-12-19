@@ -8,9 +8,9 @@
 \if{html}{\figure{r-ibr-logo.png}{options: align='right' alt='logo' width='120'}}
 }
 \details{
-The IBRtools package calculates two important indexes (IBR \link{Integrated Biomarker Response} and IBRv2 \link{Integrated Biological Response version 2}), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!
+The IBRtools package calculates two important indexes (IBR - Integrated Biomarker Response, and IBRv2 - Integrated Biological Response version 2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!
 
-This packege also comes with 3 example datasets: enzact, enzact_coef and enzact2
+This package also comes with 3 example datasets: enzact, enzact_coef and enzact2
 
 You can use them to practice or to see how the functions work so you can apply in your own datasets!
 
@@ -18,7 +18,7 @@ To load them, just use the command: data(nameofdataset)
 }
 \section{IBRtools functions}{
 
-There are 6 functions in this package, three for each index.
+There are 6 functions in this package, 3 for each index.
 
 IBR: ibr_index, ibr_std, ibr_chart
 
@@ -29,14 +29,14 @@ IBRv2: ibrv2_index, ibrv2_bdi, ibrv2_chart
 
 Author, Mainteiner: Anna Carolina Resende
 
-\code{\email{annac.resende@gmail.com}}
+\email{annac.resende@gmail.com}
 
-\code{\url{https://orcid.org/0000-0003-0909-1255}}
+\url{https://orcid.org/0000-0003-0909-1255}
 
 Author: Diego Mauro Carneiro Pereira
 
-\code{\email{diegom8135@gmail.com}}
+\email{diegom8135@gmail.com}
 
-\code{\url{https://orcid.org/0000-0003-1554-3684}}
+\url{https://orcid.org/0000-0003-1554-3684}
 }
 

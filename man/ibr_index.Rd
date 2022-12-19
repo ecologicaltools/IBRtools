@@ -4,7 +4,7 @@
 \alias{ibr_index}
 \title{IBR (Integrated Biomarker Response) index}
 \usage{
-ibr_index(df, z, na.rm = TRUE, ...)
+ibr_index(df, z)
 }
 \arguments{
 \item{df}{A data frame containing values the enzymes activities with at least two levels of one independent variable (as.factor).}

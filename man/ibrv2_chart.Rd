@@ -11,7 +11,7 @@ ibrv2_chart(
   pfcol,
   plwd,
   plty,
-  cglco,
+  cglcol,
   cglty,
   axislabcol,
   cglwd,
@@ -33,6 +33,8 @@ ibrv2_chart(
 \item{plwd}{A vector of line widths for plot data: Default 1, which is repeatedly used.}
 
 \item{plty}{A vector of line types for plot data: Default 1:6, which are repeatedly used.}
+
+\item{cglcol}{Line color for radar grids: Default "navy"}
 
 \item{cglty}{Line type for radar grids: Default 3, which means dotted line.}
 
