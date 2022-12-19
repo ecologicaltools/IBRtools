@@ -1,6 +1,6 @@
-#' IBRtools: Indexes for biomonitoring assessment and graphic creation
+#' IBRtools: An R Package for Integrating Biomarker-Based Assessments and Radarchart Creation
 #'
-#' \if{html}{\figure{r-ibr-logo.png}{options: align='right' alt='logo' width='120'}}
+#'\if{html}{\figure{r-ibr-logo.png}{options: alt='logo' width='120'}}
 #'
 #'
 #' The IBRtools package calculates two important indexes (IBR - Integrated Biomarker Response, and IBRv2 - Integrated Biological Response version 2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!
@@ -55,6 +55,7 @@
 #' @importFrom stats sd
 #' @importFrom utils tail
 #' @importFrom tidyselect where
+
 if(getRversion() >= "3.5.0")  utils::globalVariables(c("Frequency", "sites", "treatment"))
 NULL
 

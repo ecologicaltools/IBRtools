@@ -5,3 +5,4 @@
 ^IBRtools.*\.tgz$
 ^hexlogo
 ^cran-comments\.md$
+^CRAN-SUBMISSION$
