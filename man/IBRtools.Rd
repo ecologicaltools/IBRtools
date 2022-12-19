@@ -3,9 +3,9 @@
 \docType{package}
 \name{IBRtools}
 \alias{IBRtools}
-\title{IBRtools: Indexes for biomonitoring assessment and graphic creation}
+\title{IBRtools: An R Package for Integrating Biomarker-Based Assessments and Radarchart Creation}
 \description{
-\if{html}{\figure{r-ibr-logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{r-ibr-logo.png}{options: alt='logo' width='120'}}
 }
 \details{
 The IBRtools package calculates two important indexes (IBR - Integrated Biomarker Response, and IBRv2 - Integrated Biological Response version 2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!

@@ -1,3 +1,11 @@
+## version 0.1.2
+
+---
+
+### Corrections
+
+- Corrections made in accordance to CRAN 
+
 ## version 0.1.1
 
 ---

@@ -17,8 +17,6 @@ This data set gives level or activity of 28 biomarkers, generated as simulated v
     \item{\code{biomarker3}}{a numeric vector}
     \item{\code{biomarker4}}{a numeric vector}
     \item{\code{biomarker5}}{a numeric vector}
-    \item{\code{biomarker6}}{a numeric vector}
-    \item{\code{biomarker7}}{a numeric vector}
   }
 }
 \examples{
