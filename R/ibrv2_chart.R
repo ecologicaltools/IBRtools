@@ -4,7 +4,7 @@
 #'
 #' @section Tips:
 #'
-#' For this index chart, it is necessary to plot each area/treatment with the refference value separately, therefore, make sure you subset the data.frame and perform this function for each subset.
+#' For this index chart, it is necessary to plot each area/treatment with the reference value separately, therefore, make sure you subset the data.frame and perform this function for each subset.
 #'
 #' Also, you will find that the axis values are not written automatically, we suggest that our users do it manually because we couldn't yet provide an automated way to plot the zero in the correct position on the radarchart. This will be revised for next versions of this package. This can be done by changing values for seg, axistype = 1, and caxislabels.
 #'

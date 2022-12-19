@@ -23,6 +23,6 @@ library(IBRtools)
 #### Don't worry, it might be a version problem. You could simply create a free account in RStudio Cloud
 (*The simpler is just use it in Rstudio Cloud and then export the files you want to save in your computer later on*)
 #
-#### If you still come accross a new issue, please report it so we can fix it ASAP.
+#### If you still come across a new issue, please report it so we can fix it ASAP.
 #
 ## Thanks for using our functions, don't forget to cite!

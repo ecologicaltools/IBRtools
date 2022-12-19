@@ -4,3 +4,4 @@
 ^IBRtools.*\.tar\.gz$
 ^IBRtools.*\.tgz$
 ^hexlogo
+^cran-comments\.md$
