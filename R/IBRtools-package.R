@@ -11,6 +11,7 @@
 #'
 #' To load them, just use the command: data(nameofdataset)
 #'
+#'
 #' @section IBRtools functions:
 #' There are 6 functions in this package, 3 for each index.
 #'
@@ -19,7 +20,7 @@
 #' IBRv2: ibrv2_index, ibrv2_bdi, ibrv2_chart
 #'
 #' @section Authors:
-#'Author, Mainteiner: Anna Carolina Resende
+#'Author, Maintainer: Anna Carolina Resende
 #'
 #'\email{annac.resende@gmail.com}
 #'
@@ -30,6 +31,14 @@
 #'\email{diegom8135@gmail.com}
 #'
 #'\url{https://orcid.org/0000-0003-1554-3684}
+#'
+#' @references
+#' Beliaeff, B., & Burgeot, T. (2002). Integrated biomarker response: A useful tool for ecological risk assessment. Environmental Toxicology and Chemistry, 21(6), 1316–1322.
+#'
+#' Devin, S., Burgeot, T., Giambérini, L., Minguez, L., & Pain-Devin, S. (2014). The integrated biomarker response revisited: Optimization to avoid misuse. Environmental Science and Pollution Research, 21(4), 2448–2454. https://doi.org/10.1007/s11356-013-2169-9
+#'
+#' Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013). A novel “Integrated Biomarker Response” calculation based on reference deviation concept. Environmental Science and Pollution Research, 20(5), 2721–2725. https://doi.org/10.1007/s11356-012-1359-1
+#'
 #'
 #' @docType package
 #' @name IBRtools
