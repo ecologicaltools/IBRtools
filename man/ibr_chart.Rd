@@ -11,7 +11,7 @@ ibr_chart(
   pfcol,
   plwd,
   plty,
-  cglco,
+  cglcol,
   cglty,
   axislabcol,
   cglwd,
@@ -33,6 +33,8 @@ ibr_chart(
 \item{plwd}{A vector of line widths for plot data: Default 1, which is repeatedly used.}
 
 \item{plty}{A vector of line types for plot data: Default 1:6, which are repeatedly used.}
+
+\item{cglcol}{Line color for radar grids: Default "navy"}
 
 \item{cglty}{Line type for radar grids: Default 3, which means dotted line.}
 
@@ -78,10 +80,10 @@ data(enzact)
 
 ibr_std(enzact) -> enzact_chart
 
-ibr_chart(enzact_chart, legend = F)
+ibr_chart(enzact_chart, legend = FALSE)
 
 colorvector<- c(rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
 
-legend(x=1.2, y=-0.3, legend = enzact$group, bty = "n", pch=20 , col=colorvector , text.col = "black", cex=0.9, pt.cex=2)
+legend(x=1.2, y=-0.3, enzact_chart$group, bty = "n", pch=20, col=colorvector, cex=0.9, pt.cex=2)
 
 }

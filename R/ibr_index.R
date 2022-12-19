@@ -28,7 +28,7 @@
 #'
 
 
-ibr_index <- function(df, z, na.rm = TRUE, ...) {
+ibr_index <- function(df, z) {
   df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T, .groups = "drop") -> y
   x <- as.data.frame(dplyr::select_if(y, is.numeric))
   n <- dim(x)[1]

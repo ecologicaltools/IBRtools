@@ -4,7 +4,7 @@
 \alias{ibrv2_bdi}
 \title{Standardized values for IBRv2 (Integrated Biological Responses version 2)}
 \usage{
-ibrv2_bdi(df, na.rm = TRUE, ...)
+ibrv2_bdi(df)
 }
 \arguments{
 \item{df}{A data frame containing values the enzymes activities with a reference value on the first rows.}

@@ -3,3 +3,4 @@
 ^IBRtools\.Rcheck$
 ^IBRtools.*\.tar\.gz$
 ^IBRtools.*\.tgz$
+^hexlogo

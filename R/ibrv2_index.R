@@ -28,7 +28,7 @@
 #'
 
 
-ibrv2_index <- function(df, na.rm = TRUE, ...) {
+ibrv2_index <- function(df) {
   df %>% dplyr::mutate_if(is.character, as.factor) %>%  tidyr::unite("sites", (where(is.factor))) -> df
   z=df
   z$Frequency=rep(1, each=nrow(z))

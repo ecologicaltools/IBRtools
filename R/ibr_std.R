@@ -23,7 +23,7 @@
 #'Devin, S., Burgeot, T., Giambérini, L., Minguez, L., & Pain-Devin, S. (2014). The integrated biomarker response revisited: Optimization to avoid misuse. Environmental Science and Pollution Research, 21(4), 2448–2454. https://doi.org/10.1007/s11356-013-2169-9
 #'
 
-ibr_std <- function(df, z, na.rm = TRUE, ...) {
+ibr_std <- function(df, z) {
   df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T, .groups = "drop") -> y
   x <- as.data.frame(dplyr::select_if(y, is.numeric))
   n <- dim(x)[1]
