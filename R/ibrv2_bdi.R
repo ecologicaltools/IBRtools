@@ -1,10 +1,12 @@
 #' Standardized values for IBRv2 (Integrated Biological Responses version 2)
 #'
-#' This function calculates de standardized values for IBRv2 index purposed by Sanchez et al. 2013.
+#' This function calculates de standardized values for IBRv2 index proposed by Sanchez et al. 2013.
 #'
 #' Gives a dataframe with the standardized values for each area/treatment in your input data to be used to create the radarchart with the function ibrv2_chart from this same package.
 #'
 #' @param df A data frame containing values the enzymes activities with a reference value on the first rows.
+#'
+#' @return Returns a dataframe with standardized IBRv2 values for each biomarker in comparison to reference treatment
 #'
 #' @section Warnings:
 #'

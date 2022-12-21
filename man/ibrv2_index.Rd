@@ -9,8 +9,11 @@ ibrv2_index(df)
 \arguments{
 \item{df}{A data frame containing values the enzymes activities with a reference value on the first rows.}
 }
+\value{
+Returns a dataframe with IBRv2 values in comparison to reference treatment
+}
 \description{
-This function calculates de IBRv2 index purposed by Sanchez et al. 2013.
+This function calculates de IBRv2 index proposed by Sanchez et al. 2013.
 }
 \details{
 Returns a dataframe with the IBRv2 values for each area/treatment in your input data.

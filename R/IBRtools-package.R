@@ -1,8 +1,8 @@
-#' IBRtools: An R Package for Integrating Biomarker-Based Assessments and Radarchart Creation
+#' 'IBRtools': Integrating Biomarker-Based Assessments and Radarchart Creation
 #'
-#' The IBRtools package calculates two important indexes (IBR - Integrated Biomarker Response, and IBRv2 - Integrated Biological Response version 2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data!
+#' Several functions to calculate two important indexes (IBR (Integrated Biomarker Response) and IBRv2 (Integrated Biological Response version 2)), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data.
 #'
-#' This package also comes with 3 example datasets: enzact, enzact_coef and enzact2
+#' It comes with 3 example datasets: enzact, enzact_coef and enzact2
 #'
 #' You can use them to practice or to see how the functions work so you can apply in your own datasets!
 #'

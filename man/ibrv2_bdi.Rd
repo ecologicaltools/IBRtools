@@ -9,8 +9,11 @@ ibrv2_bdi(df)
 \arguments{
 \item{df}{A data frame containing values the enzymes activities with a reference value on the first rows.}
 }
+\value{
+Returns a dataframe with standardized IBRv2 values for each biomarker in comparison to reference treatment
+}
 \description{
-This function calculates de standardized values for IBRv2 index purposed by Sanchez et al. 2013.
+This function calculates de standardized values for IBRv2 index proposed by Sanchez et al. 2013.
 }
 \details{
 Gives a dataframe with the standardized values for each area/treatment in your input data to be used to create the radarchart with the function ibrv2_chart from this same package.

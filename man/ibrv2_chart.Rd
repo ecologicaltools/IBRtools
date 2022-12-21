@@ -50,6 +50,9 @@ ibrv2_chart(
 
 \item{...}{Miscellaneous arguments to be given for plot.default().}
 }
+\value{
+Returns a radarchart with the standardized values of biomarkers in comparison to reference treatment
+}
 \description{
 Plots the IBRv2 standardized values for the enzymes to be compared with one another.
 }
@@ -68,7 +71,7 @@ Check the examples for further insight.
 
 Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013). A novel “Integrated Biomarker Response” calculation based on reference deviation concept. Environmental Science and Pollution Research, 20(5), 2721–2725. https://doi.org/10.1007/s11356-012-1359-1
 
-Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
+Minato Nakazawa (2022). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
 }
 
 \examples{
