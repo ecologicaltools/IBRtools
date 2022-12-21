@@ -1,5 +1,5 @@
 Package: IBRtools
-Title: An R Package for Integrating Biomarker-Based Assessments and Radarchart Creation
+Title: Integrating Biomarker-Based Assessments and Radarchart Creation
 Version: 0.1.2
 Authors@R: 
     c(person(given = "Anna Carolina",
@@ -12,7 +12,7 @@ Authors@R:
            role = c("aut"),
            email = "diegom8135@gmail.com",
            comment = c("https://orcid.org/0000-0003-1554-3684")))
-Description: The IBRtools package calculates two important indexes (IBR and IBRv2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data. 
+Description: Several functions to calculate two important indexes (IBR (Integrated Biomarker Response) and IBRv2 (Integrated Biological Response version 2)), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data. Beliaeff, B., & Burgeot, T. (2002). <https://pubmed.ncbi.nlm.nih.gov/12069320/>. Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013).<doi:10.1007/s11356-012-1359-1>. Devin, S., Burgeot, T., Giambérini, L., Minguez, L., & Pain-Devin, S. (2014). <doi:10.1007/s11356-013-2169-9>. Minato N. (2022). <https://minato.sip21c.org/msb/>.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

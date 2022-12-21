@@ -1,12 +1,14 @@
 #' IBR (Integrated Biomarker Response) index
 #'
-#' This function calculates de Integrated Biomarker Response index purposed by Beliaeff and Burgeot, 2002 and revisited by Devin et al. 2014.
+#' This function calculates de Integrated Biomarker Response index proposed by Beliaeff and Burgeot, 2002 and revisited by Devin et al. 2014.
 #'
 #' Gives a list of two dataframes, the first data frame is IBR_total and it can be used for statistical analysis (such as ANOVA, t-test) to verify the differences between each level of the independent variable(s). The second data frame is IBR_mean_sd, it gives the mean values and standard deviation for each independent variable, which is usually presented next to a radarplot.
 #'
 #'
 #' @param df A data frame containing values the enzymes activities with at least two levels of one independent variable (as.factor).
 #' @param z A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.
+#'
+#' @return Returns a list with two dataframes, the IBR index value per treatment and its mean and standard deviation
 #'
 #' @section Warnings:
 #'

@@ -50,6 +50,9 @@ ibr_chart(
 
 \item{...}{Miscellaneous arguments to be given for plot.default().}
 }
+\value{
+Returns a radarchart with the standardized values of biomarkers
+}
 \description{
 Plots the IBR standardized values for the enzymes to be compared with one another.
 }
@@ -71,7 +74,7 @@ Beliaeff, B., & Burgeot, T. (2002). Integrated biomarker response: A useful tool
 
 Devin, S., Burgeot, T., Giambérini, L., Minguez, L., & Pain-Devin, S. (2014). The integrated biomarker response revisited: Optimization to avoid misuse. Environmental Science and Pollution Research, 21(4), 2448–2454. https://doi.org/10.1007/s11356-013-2169-9
 
-Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
+Minato Nakazawa (2022). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
 }
 
 \examples{

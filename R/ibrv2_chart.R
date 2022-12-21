@@ -15,6 +15,8 @@
 #'
 #' @param legend Default is NULL, when any other value is given the legend will not appear and you can manually create your own using the legend() function right after building your radarchart
 #'
+#' @return Returns a radarchart with the standardized values of biomarkers in comparison to reference treatment
+#'
 #' @inheritParams fmsb::radarchart
 #'
 #' @export
@@ -36,7 +38,7 @@
 #'
 #' Sanchez, W., Burgeot, T., & Porcher, J.-M. (2013). A novel “Integrated Biomarker Response” calculation based on reference deviation concept. Environmental Science and Pollution Research, 20(5), 2721–2725. https://doi.org/10.1007/s11356-012-1359-1
 #'
-#'  Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
+#'  Minato Nakazawa (2022). fmsb: Functions for Medical Statistics Book with some Demographic Data. R package version 0.7.0. https://CRAN.R-project.org/package=fmsb
 #'
 
 ibrv2_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglcol, cglty, axislabcol, cglwd, caxislabels, seg, legend = NULL, ...) {
