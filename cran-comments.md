@@ -6,7 +6,7 @@
 ## R CMD check results
  On windows-x86_64-devel (r-devel), ubuntu-gcc-release (r-release), fedora-clang-devel (r-devel)
 
-  * checking CRAN incoming feasibility ... [6s/24s] NOTE
+  * checking CRAN incoming feasibility ...  NOTE
 Maintainer: ‘Anna Carolina Resende <annac.resende@gmail.com>
 
  0 errors ✔ | 0 warnings ✔ | 3 notes ✖ 

@@ -13,7 +13,7 @@ Authors@R:
            email = "diegom8135@gmail.com",
            comment = c("https://orcid.org/0000-0003-1554-3684")))
 Description: The IBRtools package calculates two important indexes (IBR and IBRv2), it also calculates the standardized values for enzyme activity for each index, and it has a graphing function to perform radarplots that make great data visualization for this type of data. 
-License: GPL-3 + file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
