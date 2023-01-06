@@ -8,3 +8,4 @@
 ^CRAN-SUBMISSION$
 ^\.github$
 ^LICENSE$
+^\.travis\.yml$
