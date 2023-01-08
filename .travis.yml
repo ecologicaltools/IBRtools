@@ -10,3 +10,6 @@ r_packages:
 # only report coverage after build is successful
 after_success:
   - Rscript -e 'covr::codecov()'
+  - curl -Os https://uploader.codecov.io/latest/linux/codecov
+  - chmod +x codecov
+  - ./codecov
