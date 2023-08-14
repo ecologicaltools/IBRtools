@@ -9,6 +9,4 @@
   * checking CRAN incoming feasibility ...  NOTE
 Maintainer: ‘Anna Carolina Resende <annac.resende@gmail.com>
 
- 0 errors ✔ | 0 warnings ✔ | 3 notes ✖ 
-
- * This is a new release.
+ 0 errors ✔ | 0 warnings ✔ | 0 notes ✔

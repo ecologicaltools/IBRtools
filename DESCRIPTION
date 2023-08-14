@@ -1,6 +1,6 @@
 Package: IBRtools
 Title: Integrating Biomarker-Based Assessments and Radarchart Creation
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: 
     c(person(given = "Anna Carolina",
            family = "Resende",

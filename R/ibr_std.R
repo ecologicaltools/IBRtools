@@ -6,7 +6,7 @@
 #' @param df A data frame containing values the enzymes activities with at least two levels of one independent variable.
 #' @param z A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.
 #'
-#' @return Returns a dataframe with standardized values for each biomarker per treatment
+#' @return Returns a data frame with standardized values for each biomarker per treatment
 #'
 #' @section Warnings:
 #'
@@ -26,7 +26,7 @@
 #'
 
 ibr_std <- function(df, z) {
-  df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T, .groups = "drop") -> y
+  df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = TRUE, .groups = "drop") -> y
   x <- as.data.frame(dplyr::select_if(y, is.numeric))
   n <- dim(x)[1]
   one <- rep(1, n)
@@ -50,4 +50,3 @@ ibr_std <- function(df, z) {
   S %>% tibble::rownames_to_column(var = "group") -> S
   return(S)
 }
-
