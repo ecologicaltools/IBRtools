@@ -5,7 +5,7 @@
 #' Gives a list of two dataframes, the first data frame is IBR_total and it can be used for statistical analysis (such as ANOVA, t-test) to verify the differences between each level of the independent variable(s). The second data frame is IBR_mean_sd, it gives the mean values and standard deviation for each independent variable, which is usually presented next to a radarplot.
 #'
 #'
-#' @param df A data frame containing values the enzymes activities with at least two levels of one independent variable (as.factor).
+#' @param df The data frame output of the function ibr_std of this package.
 #' @param z A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.
 #'
 #' @return Returns a list with two dataframes, the IBR index value per treatment and its mean and standard deviation
@@ -18,9 +18,12 @@
 #'
 #' @examples
 #' data(enzact)
-#' ibr_index(enzact, enzact_coef)
 #'
-#' ibr_index(enzact)
+#' outstd<- ibr_std(enzact)
+#'
+#' ibr_index(outstd, enzact_coef)
+#'
+#' ibr_index(outstd)
 #'
 #' @section References:
 #'
@@ -31,27 +34,7 @@
 
 
 ibr_index <- function(df, z) {
-  df %>% dplyr::mutate_if(is.character, as.factor) %>% tidyr::unite("treatment", (where(is.factor))) %>% dplyr::mutate_if(is.character, as.factor) %>%  dplyr::group_by_if(is.factor) %>% dplyr::summarise_all(mean, na.rm = T, .groups = "drop") -> y
-  x <- as.data.frame(dplyr::select_if(y, is.numeric))
-  n <- dim(x)[1]
-  one <- rep(1, n)
-  x %>% dplyr::summarise_all(mean) -> med
-  as.matrix(med) -> med
-  diff <- x - one %*% med
-  x %>% dplyr::summarise_all(sd) -> s
-  as.matrix(s) -> s
-  matrixsd <- one %*% s
-  y1 <- diff/matrixsd
-  if(missing(z)) {
-    matrix(1, nrow = nrow(x), ncol = ncol(x)) -> z1}
-  else {z1 <- as.matrix(dplyr::select_if(z, is.numeric))}
-  z2 <- z1 * y1
-  as.matrix(apply(z2, 2, FUN=min, na.rm= TRUE)) -> min
-  t(min) -> min
-  matrixmin <- one %*% min
-  S <- as.data.frame(z2 + abs(matrixmin))
-  as.matrix(dplyr::select_if(y, is.factor, as.character)) -> u
-  rownames(S) <- u
+  df %>% remove_rownames %>% tibble::column_to_rownames(var="group")-> S
   t(S) -> ts
   as.data.frame(ts) -> ts
   ts %>%  tibble::rownames_to_column( var = "trat" ) -> ts

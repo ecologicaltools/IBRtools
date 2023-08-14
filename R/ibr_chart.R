@@ -50,10 +50,8 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglcol, cglty, axisl
   rbind(max,min,df) -> chart
   as.data.frame(chart)-> chart
   colors_border <- c(rgb(1,0.4,0.8,0.7), rgb(0,0.6,0.6,0.7) , rgb(0.4,0.4,0.6,0.7), rgb(0,0.4,0.4,0.7))
-  colors_in <- c( rgb(1,0.4,0.8,0.25), rgb(0,0.6,0.6,0.25) , rgb(0.4,0.4,0.6,0.25), rgb(0,0.4,0.4,0.25))
   if(missing(axistype)) {axistype = 1}
   if(missing(pcol)) {pcol = colors_border}
-  if(missing(pfcol)) {pfcol = colors_in}
   if(missing(plwd)) {plwd = 2}
   if(missing(plty)) {plty = 1}
   if(missing(cglcol)) {cglcol = "grey"}
@@ -65,7 +63,6 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglcol, cglty, axisl
   fmsb::radarchart(chart,
                    axistype = axistype,
                    pcol= pcol,
-                   pfcol= pfcol,
                    plwd= plwd,
                    plty= plty,
                    cglcol= cglcol,
@@ -73,7 +70,9 @@ ibr_chart<- function(df, axistype, pcol, pfcol, plwd, plty, cglcol, cglty, axisl
                    axislabcol= axislabcol,
                    caxislabels=caxislabels,
                    cglwd=cglwd,
-                   vlcex=0.8, ...)
+                   centerzero=T,
+                   vlcex=0.8,
+                   seg = seg, ...)
   if(is.null(legend)) {legend = legend(x=1.2, y=-0.3, legend = rownames(chart[-c(1,2),]), bty = "n", pch=20 , col=colors_border , text.col = "black", cex=0.9, pt.cex=2)}
 
 }

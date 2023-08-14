@@ -12,7 +12,7 @@ ibr_std(df, z)
 \item{z}{A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.}
 }
 \value{
-Returns a dataframe with standardized values for each biomarker per treatment
+Returns a data frame with standardized values for each biomarker per treatment
 }
 \description{
 Returns a data frame with standardized values of IBR useful to do a radar chart. This data is fit for our function ibr_chart() from this package that creates this type of plot.

@@ -7,7 +7,7 @@
 ibr_index(df, z)
 }
 \arguments{
-\item{df}{A data frame containing values the enzymes activities with at least two levels of one independent variable (as.factor).}
+\item{df}{The data frame output of the function ibr_std of this package.}
 
 \item{z}{A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.}
 }
@@ -36,8 +36,11 @@ Devin, S., Burgeot, T., Giambérini, L., Minguez, L., & Pain-Devin, S. (2014). T
 
 \examples{
 data(enzact)
-ibr_index(enzact, enzact_coef)
 
-ibr_index(enzact)
+outstd<- ibr_std(enzact)
+
+ibr_index(outstd, enzact_coef)
+
+ibr_index(outstd)
 
 }

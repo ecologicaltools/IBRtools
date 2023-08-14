@@ -1,3 +1,10 @@
+## version 0.1.3
+
+- Changes in ibr_index function 
+- Changes in main graphic output
+
+---
+
 ## version 0.1.2
 
 ---
