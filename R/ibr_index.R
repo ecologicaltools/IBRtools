@@ -6,7 +6,6 @@
 #'
 #'
 #' @param df The data frame output of the function ibr_std of this package.
-#' @param z A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.
 #'
 #' @return Returns a list with two dataframes, the IBR index value per treatment and its mean and standard deviation
 #'
@@ -21,9 +20,9 @@
 #'
 #' outstd<- ibr_std(enzact)
 #'
-#' ibr_index(outstd, enzact_coef)
-#'
 #' ibr_index(outstd)
+#'
+#'
 #'
 #' @section References:
 #'
@@ -33,7 +32,7 @@
 #'
 
 
-ibr_index <- function(df, z) {
+ibr_index <- function(df) {
   df %>% remove_rownames %>% tibble::column_to_rownames(var="group")-> S
   t(S) -> ts
   as.data.frame(ts) -> ts

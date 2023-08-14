@@ -4,12 +4,10 @@
 \alias{ibr_index}
 \title{IBR (Integrated Biomarker Response) index}
 \usage{
-ibr_index(df, z)
+ibr_index(df)
 }
 \arguments{
 \item{df}{The data frame output of the function ibr_std of this package.}
-
-\item{z}{A data frame with the Z coefficient for each enzyme at each level. If not provided, all z values will be 1.}
 }
 \value{
 Returns a list with two dataframes, the IBR index value per treatment and its mean and standard deviation
@@ -39,8 +37,8 @@ data(enzact)
 
 outstd<- ibr_std(enzact)
 
-ibr_index(outstd, enzact_coef)
-
 ibr_index(outstd)
+
+
 
 }
