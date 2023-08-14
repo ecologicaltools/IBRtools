@@ -39,7 +39,8 @@ ibr_std <- function(df, z) {
   y1 <- diff/matrixsd
   if(missing(z)) {
     matrix(1, nrow = nrow(x), ncol = ncol(x)) -> z1}
-  else {z1 <- as.matrix(dplyr::select_if(z, is.numeric))}
+  else {as.matrix(dplyr::select_if(z, is.numeric)) -> z0
+    z0[rep(1, nrow(x)),] -> z1}
   z2 <- z1 * y1
   as.matrix(apply(z2, 2, FUN=min, na.rm= TRUE)) -> min
   t(min) -> min
