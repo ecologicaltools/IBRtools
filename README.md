@@ -22,7 +22,7 @@ library(IBRtools)
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ecologicaltools/IBRtools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ecologicaltools/IBRtools/actions/workflows/R-CMD-check.yaml)
-[![Travis build status](https://travis-ci.com/ecologicaltools/IBRtools.svg?branch=main)](https://travis-ci.com/ecologicaltools/IBRtools)
+[![Codecov test coverage](https://codecov.io/gh/ecologicaltools/IBRtools/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ecologicaltools/IBRtools?branch=main)
 <!-- badges: end -->
 # 
 #### Don't worry, it might be a version problem. You could simply create a free account in RStudio Cloud
