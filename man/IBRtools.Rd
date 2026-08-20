@@ -2,6 +2,7 @@
 % Please edit documentation in R/IBRtools-package.R
 \docType{package}
 \name{IBRtools}
+\alias{-package}
 \alias{IBRtools}
 \title{'IBRtools': Integrating Biomarker-Based Assessments and Radarchart Creation}
 \description{

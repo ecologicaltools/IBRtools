@@ -36,7 +36,7 @@ ibr_chart(
 
 \item{cglcol}{Line color for radar grids: Default "navy"}
 
-\item{cglty}{Line type for radar grids: Default 3, which means dotted line.}
+\item{cglty}{Line type for radar grids: Default 3, dotted line.  For radatchartcirc(), default 1, solid line.}
 
 \item{axislabcol}{Color of axis label and numbers: Default "blue"}
 
